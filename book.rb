@@ -1,5 +1,6 @@
 class Book
   attr_accessor :title, :author, :rentals
+
   has_many :rentals
   has_many :persons, through: :rentals
 

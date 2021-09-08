@@ -1,8 +1,7 @@
 class Classroom
   attr_accessor :label, :student
-  has_many :students
 
-  students = []
+  has_many :students
 
   def initialize(label, student)
     @label = label
@@ -10,6 +9,6 @@ class Classroom
   end
 
   def add_students(student)
-    students.push(student)
+    @students.push(student)
   end
 end
