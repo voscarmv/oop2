@@ -20,8 +20,12 @@ class App
   end
 
   def all_people
-    @people.each do |person|
-      puts "Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
+    if @books.length.positive?
+      @people.each do |person|
+        puts "Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
+      end
+    else
+      puts 'There are no people created'
     end
   end
 
