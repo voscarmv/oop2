@@ -1,3 +1,7 @@
+require_relative "./book.rb"
+require_relative "./person.rb"
+require_relative "./student.rb"
+require_relative "./teacher.rb"
 class App
     def initialize
         @books = []
@@ -6,7 +10,11 @@ class App
     end
     
     def all_books
-        # Lists all books
+      if @books.length > 0 
+        @books.each { |book| puts "title: #{book.title}, Author: #{book.author}" }   
+      else
+          puts "There are no books at the moment"
+      end
     end
 
     def all_people
@@ -14,11 +22,18 @@ class App
     end
 
     def create_person
-        # creates a person
+        
     end
 
     def create_book
-        # creates a book
+        print "Title: "
+        title = gets.chomp
+    
+        print "Author: "
+        author = gets.chomp
+    
+        @books << Book.new(title, author)
+        puts "Book created successfully"
     end
 
     def create_rental
@@ -34,7 +49,7 @@ def main
     app = App.new()
     selection = nil
 
-    unless selection === "7"
+    while selection != "7"
         puts "Please choose an option by enterin a number:"
         puts "1 - List all books"
         puts "2 - List all people"
@@ -63,9 +78,7 @@ def main
         when "7"
           puts "Thank you for using this app!"
         end
-    
         puts "\n"
       end
 end
-
 main()
