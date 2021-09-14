@@ -39,4 +39,10 @@ e.g. $ cd Desktop/OOP-training
 - Github: [@DeliceLydia](https://github.com/DeliceLydia)
 - Twitter: [@IngabireLydia3](https://twitter.com/IngabireLydia)
 - Linkedin: [Delice Lydia](https://www.linkedin.com/in/delice-lydia)
+
+👤 **Peter Robert**
+
+- Github: [@peterrobert](https://github.com/peterrobert)
+- Twitter: [@ptahwambui93](https://twitter.com/Ptahwambui93)
+- Linkedin: [Peter Robert Ndungu](https://www.linkedin.com/in/peter-rob-ndungu/)
 ​
