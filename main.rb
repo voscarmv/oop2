@@ -22,7 +22,50 @@ class App
     end
 
     def create_person
-        
+        puts "Do you want to create a student (1) or a teacher (2)?"
+        print "Select (1) or (2)"
+        print " "
+        selection = gets.chomp
+
+        if (selection === "1") 
+            print "Age: "
+            age = gets.chomp
+
+            print "Name: "
+            name = gets.chomp
+
+            ispermitted = false
+            print "Has parent permission? [Y/N]: "
+            permission = gets.chomp
+            permission = permission.downcase == "y"
+            if permission === 'y' 
+             ispermitted = true
+            else
+                ispermitted = false
+            end
+            
+    
+            @people << Student.new(age, name, ispermitted)
+
+            puts "student created successfully"
+        elsif (selection === "2")
+            print "Age: "
+            age = gets.chomp
+
+            print "Name: "
+            name = gets.chomp
+
+            print "Specialization: "
+            specialization = gets.chomp
+            @people << Teacher.new(age, specialization, name)
+
+            puts "Teacher created successfully"
+
+        else
+            puts "invalid selection"
+
+            return
+        end
     end
 
     def create_book
