@@ -10,7 +10,7 @@ class Person
     @age = age
     @name = name
     @parent_permission = parent_permission
-    @rentals []
+    @rentals = []
   end
 
   def add_rentals(book, date)
