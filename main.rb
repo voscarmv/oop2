@@ -11,6 +11,11 @@ class App
     @rentals = []
   end
 
+  def prompt(message)
+    print message
+    gets.chomp
+  end
+
   def all_books
     if @books.length.positive?
       @books.each { |book| puts "title: #{book.title}, Author: #{book.author}" }
@@ -37,11 +42,8 @@ class App
 
     case selection
     when '1'
-      print 'Age: '
-      age = gets.chomp
-
-      print 'Name: '
-      name = gets.chomp
+      age = prompt('Age: ')
+      name = prompt('Name :')
 
       print 'Has parent permission? [Y/N]: '
       permission = gets.chomp
@@ -51,14 +53,9 @@ class App
 
       puts 'student created successfully'
     when '2'
-      print 'Age: '
-      age = gets.chomp
-
-      print 'Name: '
-      name = gets.chomp
-
-      print 'Specialization: '
-      specialization = gets.chomp
+      age = prompt('Age: ')
+      name = prompt('Name: ')
+      specialization = prompt('Specialization: ')
       @people << Teacher.new(age, specialization, name)
 
       puts 'Teacher created successfully'
@@ -71,11 +68,8 @@ class App
   end
 
   def create_book
-    print 'Title: '
-    title = gets.chomp
-
-    print 'Author: '
-    author = gets.chomp
+    title = prompt('Title: ')
+    author = prompt('Author: ')
 
     @books << Book.new(title, author)
     puts 'Book created successfully'
@@ -118,16 +112,16 @@ def main
   selection = nil
 
   while selection != '7'
-    puts 'Please choose an option by enterin a number:'
-    puts '1 - List all books'
-    puts '2 - List all people'
-    puts '3 - Create a person'
-    puts '4 - Create a book'
-    puts '5 - Create a rental'
-    puts '6 - List all rentals for a given person id'
-    puts '7 - Exit'
-    print 'Add your selection'
-    print ' '
+    print 'Please choose an option by enterin a number:\n'\
+          '1 - List all books\n'\
+          '2 - List all people\n'\
+          '3 - Create a person\n'\
+          '4 - Create a book\n'\
+          '5 - Create a rental\n'\
+          '6 - List all rentals for a given person id\n'\
+          '7 - Exit\n'\
+          'Add your selection\n'\
+          ' '
     selection = gets.chomp
 
     case selection
