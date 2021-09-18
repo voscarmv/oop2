@@ -46,3 +46,4 @@ e.g. $ cd Desktop/OOP-training
 - Twitter: [@ptahwambui93](https://twitter.com/Ptahwambui93)
 - Linkedin: [Peter Robert Ndungu](https://www.linkedin.com/in/peter-rob-ndungu/)
 ​
+👤 **Oscar Mier**
